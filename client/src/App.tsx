@@ -1,10 +1,13 @@
 import './App.css'
+import { Dropdown } from './components/Dropdown'
 
-function  App(){
+function App() {
 
   return (
     <>
-      hola
+      <div className='container'>
+        <Dropdown />
+      </div>
     </>
   )
 }
