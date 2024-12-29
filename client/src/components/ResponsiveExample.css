@@ -1,0 +1,118 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100dvh;
+  font-weight: 700;
+}
+
+header {
+  display: flex;
+  gap: 10px;
+  background-color: #1a24a8;
+  color: #ebf3ff;
+  padding: 30px;
+  position: sticky;
+  top: 0;
+  .burguer{
+    display: none;
+  }
+
+}
+
+
+
+.content{
+  height: calc(100vh - 141px);
+  display: flex;
+  align-items: start;
+}
+
+aside {
+  width: 10%;
+  height: calc(100vh - 141px);
+  background-color: #5c0db5;
+  color: #f5f1ff;
+  padding: 30px;
+  position: sticky;
+  top: 81px;
+  transition: all 0.5s;
+}
+section{
+  height: calc(100vh - 81px);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  height: calc(100dvh - 161px);
+  padding: 30px;
+  background-color: #464544;
+  color: #f6f5f5;
+}
+
+footer {
+  padding: 30px;
+  background-color: #4d551f;
+  color: #fafaeb;
+}
+
+@media (max-width: 500px) {
+  aside {
+    width: 0;
+    opacity: 0;
+    position: fixed;
+  }
+  section{
+    width: 100%;
+  }
+
+  header {
+    .burguer{
+      display: flex;
+      flex-direction: column;
+      width: .75rem;
+      height: .75rem;
+      border: 0;
+      border-radius: 0.25rem;
+      padding: 5px;
+      background-color: transparent;
+      justify-content: space-between;
+      transition: all 0.25s;
+      > div {
+        background-color: #ebf3ff;
+        height: 2px;
+        width: 100%;
+        border-radius: 5px;
+        transition: all 0.5s;
+        transform-origin: left center;
+      }
+    }
+
+    .burguer:hover{
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    input:checked + .burguer{
+      div:first-child{
+        transform: rotate(45deg);
+        width: calc(.75rem* sqrt(2));
+        translate: 0 -1px;
+      }
+      div:nth-child(2){
+        opacity: 0;
+      }
+      div:last-child{
+        transform: rotate(-45deg);
+        width: calc(.75rem * sqrt(2));
+        translate: 0 1px;
+      }
+    }
+  }
+  header:has(input:checked) ~ .content aside {
+    width: 60%;
+    opacity: 1;
+  }
+}
+
+

@@ -1,13 +1,11 @@
 import './App.css'
-import { Dropdown } from './components/Dropdown'
+import { ResponsiveExample } from './components/ResponsiveExample'
 
 function App() {
 
   return (
     <>
-      <div className='container'>
-        <Dropdown />
-      </div>
+      <ResponsiveExample />
     </>
   )
 }
