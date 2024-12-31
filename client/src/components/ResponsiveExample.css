@@ -14,15 +14,11 @@ header {
   padding: 30px;
   position: sticky;
   top: 0;
-  .burguer{
+  .burguer {
     display: none;
   }
-
 }
-
-
-
-.content{
+.content {
   height: calc(100vh - 141px);
   display: flex;
   align-items: start;
@@ -38,7 +34,7 @@ aside {
   top: 81px;
   transition: all 0.5s;
 }
-section{
+section {
   height: calc(100vh - 81px);
   width: 90%;
   display: flex;
@@ -63,16 +59,16 @@ footer {
     opacity: 0;
     position: fixed;
   }
-  section{
+  section {
     width: 100%;
   }
 
   header {
-    .burguer{
+    .burguer {
       display: flex;
       flex-direction: column;
-      width: .75rem;
-      height: .75rem;
+      width: 0.75rem;
+      height: 0.75rem;
       border: 0;
       border-radius: 0.25rem;
       padding: 5px;
@@ -89,22 +85,22 @@ footer {
       }
     }
 
-    .burguer:hover{
+    .burguer:hover {
       background: rgba(255, 255, 255, 0.5);
     }
 
-    input:checked + .burguer{
-      div:first-child{
+    input:checked + .burguer {
+      div:first-child {
         transform: rotate(45deg);
-        width: calc(.75rem* sqrt(2));
+        width: calc(0.75rem * sqrt(2));
         translate: 0 -1px;
       }
-      div:nth-child(2){
+      div:nth-child(2) {
         opacity: 0;
       }
-      div:last-child{
+      div:last-child {
         transform: rotate(-45deg);
-        width: calc(.75rem * sqrt(2));
+        width: calc(0.75rem * sqrt(2));
         translate: 0 1px;
       }
     }
@@ -114,5 +110,3 @@ footer {
     opacity: 1;
   }
 }
-
-
