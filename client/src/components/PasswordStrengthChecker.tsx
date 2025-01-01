@@ -94,7 +94,7 @@ function evaluateStrength(password: string): strength {
 
 
 function minimunLength(password: string): boolean {
-  return password.length >= 10
+  return password.length >= 8
 }
 
 function hasNumber(password: string): boolean {
